@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fffbf1">
+<meta name="description" content="La biblioteca ilustrada de Milo. Abre un libro y empieza la aventura.">
+<title>El mundo de Milo</title>
+<link rel="stylesheet" href="./estilos.css">
+<script defer src="./libros.js"></script>
+<script defer src="./milo.js"></script>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#" aria-label="El mundo de Milo, biblioteca"><img src="./milo.png" width="48" height="48" alt=""> El mundo de Milo</a>
+  <a id="library-link" href="#libros">Biblioteca</a>
+</header>
+<main id="home">
+  <section class="hero" aria-labelledby="world-title">
+    <div class="hero-copy">
+      <h1 id="world-title">El mundo de <em aria-label="Milo"><span>M</span><span>i</span><span>l</span><span>o</span></em></h1>
+      <p>Historias para imaginar, aprender y construir un mundo más igual.</p>
+      <a class="hero-cta" href="#libros">Explora los libros</a>
+    </div>
+    <div class="hero-art">
+      <span class="sun-shape" aria-hidden="true"></span>
+      <span class="sun-spark" aria-hidden="true">✦</span>
+      <img src="./milo-hero.png" alt="Milo sonriendo con su mochila verde y su estrella amarilla">
+    </div>
+  </section>
+  <section id="libros" class="library" aria-labelledby="library-title"><h2 id="library-title">Elige tu aventura</h2><div id="shelf" class="shelf"></div></section>
+</main>
+<main id="reader" hidden>
+  <div class="reader-top">
+    <button id="back" class="soft" type="button">Volver a la biblioteca</button>
+    <button id="zoom" class="soft" type="button" aria-pressed="false">Ampliar</button>
+  </div>
+  <h1 id="book-title" tabindex="-1"></h1>
+  <div id="viewport" class="viewport">
+    <div id="page" class="page" aria-label="Página del libro">
+      <div id="under" class="sheet" aria-hidden="true"></div>
+      <div id="front" class="sheet"></div>
+      <div id="crease" aria-hidden="true"></div>
+      <div id="paper-back" aria-hidden="true"></div>
+    </div>
+  </div>
+  <nav class="controls" aria-label="Navegación del libro">
+    <button id="prev" class="soft" type="button">Anterior</button>
+    <output id="count" aria-live="polite"></output>
+    <button id="next" class="soft" type="button">Siguiente</button>
+  </nav>
+  <p id="reader-error" role="status" hidden></p>
+  <a id="download" class="read-cta download" download>Descargar PDF</a>
+  <p id="gesture-hint" class="hint">Toca un borde o arrastra la hoja para pasar de página.</p>
+</main>
+</body>
+</html>
