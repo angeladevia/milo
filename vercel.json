@@ -1,0 +1,16 @@
+{
+  "framework": null,
+  "buildCommand": "sh compilar.sh",
+  "outputDirectory": "public",
+  "headers": [
+    {
+      "source": "/libros/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, noimageindex"
+        }
+      ]
+    }
+  ]
+}
